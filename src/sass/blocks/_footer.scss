@@ -65,14 +65,14 @@
       &::before {
         width: 9px;
         height: 16px;
-        background: url(../../img/icons/Arrow-right.svg) center/cover;
+        background: url(../img/icons/Arrow-right.svg) center/cover;
       }
     }
     &-artArrow {
       &::before {
         width: 20px;
         height: 19px;
-        background: url(../../img/icons/artArrow.svg) center/cover;
+        background: url(../img/icons/artArrow.svg) center/cover;
       }
     }
     &-social {
@@ -94,7 +94,7 @@
     }
     &-fb {
       &::before {
-        background: $white url(../../img/icons/fb.svg) center/cover no-repeat;
+        background: $white url(../img/icons/fb.svg) center/cover no-repeat;
         background-size: 48px;
         @include desktop-l {
           background-size: 40px;
@@ -106,7 +106,7 @@
     }
     &-vk {
       &::before {
-        background: $white url(../../img/icons/vk.svg) center/cover no-repeat;
+        background: $white url(../img/icons/vk.svg) center/cover no-repeat;
         background-size: 24px;
         @include desktop-l {
           background-size: 20px;
@@ -118,7 +118,7 @@
     }
     &-inst {
       &::before {
-        background: $white url(../../img/icons/inst.svg) center/cover no-repeat;
+        background: $white url(../img/icons/inst.svg) center/cover no-repeat;
         background-size: 24px;
         @include desktop-l {
           background-size: 20px;
@@ -130,7 +130,7 @@
     }
     &-ok {
       &::before {
-        background: $white url(../../img/icons/ok.svg) center/cover no-repeat;
+        background: $white url(../img/icons/ok.svg) center/cover no-repeat;
         background-size: 24px;
         @include desktop-l {
           background-size: 20px;
@@ -142,7 +142,7 @@
     }
     &-youtube {
       &::before {
-        background: $white url(../../img/icons/youtube.svg) center/cover no-repeat;
+        background: $white url(../img/icons/youtube.svg) center/cover no-repeat;
         background-size: 24px;
         @include desktop-l {
           background-size: 20px;
