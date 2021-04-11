@@ -28,7 +28,7 @@
     min-height: 933px;
     overflow: hidden;
     @include desktop-l {
-      min-height: 960px;
+      min-height: 820px;
     }
     @include desktop-m {
       min-height: 800px;
@@ -58,7 +58,7 @@
     line-height: 26px;
     margin-top: 15px;
     @include desktop-l {
-      font-size: 18px;
+      font-size: 17px;
       line-height: 24px;
     }
     @include desktop-m {
