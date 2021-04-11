@@ -1,0 +1,64 @@
+// ПЕРЕМЕННЫЕ И МИКСИНЫ
+
+@import "base/variables";
+@import "base/mixins";
+
+
+// ПОДКЛЮЧАЕМ БИБЛИОТЕКИ
+
+
+@import "libs/bootstrap-reboot.min";
+@import "libs/slick";
+
+
+// ЗАГОЛОВКИ
+
+@import "blocks/titles";
+
+// ОСНОВНЫЕ БЛОКИ
+
+@import "blocks/header";
+@import "blocks/first";
+@import "blocks/advantages";
+@import "blocks/services";
+@import "blocks/footer";
+
+
+// ДОПОЛНИТЕЛЬНЫЕ ОБЩИЕ СТИЛИ
+
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 1000px;
+    width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
+
+.navbar { 
+  @include desktop-s {
+    align-items: flex-start;
+  }
+}
+.navbar-toggler {
+  box-shadow: none!important;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar-toggler-icon {
+  background: url(../../img/icons/burger.svg);
+}
+

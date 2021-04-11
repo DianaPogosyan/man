@@ -1,0 +1,169 @@
+
+.footer {
+  background: $light-gray;
+  color: $dark-gray;
+  padding-bottom: 55px;
+  @include desktop-l {
+    padding-bottom: 45px;
+  }
+  &__wrapper {
+    display: flex;
+    padding: 55px;
+    padding-bottom: 36px;
+    @include desktop-l {
+
+    }
+  }
+  &__column {
+    width: 457px;
+  }
+  &__subtitle {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 32px;
+    @include desktop-l {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 28px;
+    }
+    @include desktop-m {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 22px;
+    }
+  }
+  &__links {
+    display: block;
+    color: $dark-gray;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 26px;
+    margin-top: 16px;
+    position: relative;
+    padding-left: 20px;
+    transition: all.6s;
+    &:hover {
+      color: $cold-gray;
+    }
+    @include desktop-l {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include desktop-m {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+    &-arrow {
+      &::before {
+        width: 9px;
+        height: 16px;
+        background: url(../../img/icons/Arrow-right.svg) center/cover;
+      }
+    }
+    &-artArrow {
+      &::before {
+        width: 20px;
+        height: 19px;
+        background: url(../../img/icons/artArrow.svg) center/cover;
+      }
+    }
+    &-social {
+      padding-left: 65px;
+      margin-top: 30px;
+      &::before {
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        @include desktop-l {
+          width: 40px;
+          height: 40px;
+        }
+        @include desktop-m {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    &-fb {
+      &::before {
+        background: $white url(../../img/icons/fb.svg) center/cover no-repeat;
+        background-size: 48px;
+        @include desktop-l {
+          background-size: 40px;
+        }
+        @include desktop-m {
+          background-size: 34px;
+        }
+      }
+    }
+    &-vk {
+      &::before {
+        background: $white url(../../img/icons/vk.svg) center/cover no-repeat;
+        background-size: 24px;
+        @include desktop-l {
+          background-size: 20px;
+        }
+        @include desktop-m {
+          background-size: 14px;
+        }
+      }
+    }
+    &-inst {
+      &::before {
+        background: $white url(../../img/icons/inst.svg) center/cover no-repeat;
+        background-size: 24px;
+        @include desktop-l {
+          background-size: 20px;
+        }
+        @include desktop-m {
+          background-size: 14px;
+        }
+      }
+    }
+    &-ok {
+      &::before {
+        background: $white url(../../img/icons/ok.svg) center/cover no-repeat;
+        background-size: 24px;
+        @include desktop-l {
+          background-size: 20px;
+        }
+        @include desktop-m {
+          background-size: 14px;
+        }
+      }
+    }
+    &-youtube {
+      &::before {
+        background: $white url(../../img/icons/youtube.svg) center/cover no-repeat;
+        background-size: 24px;
+        @include desktop-l {
+          background-size: 20px;
+        }
+        @include desktop-m {
+          background-size: 14px;
+        }
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 55px;
+    font-size: 23px;
+    @include desktop-l {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+    @include desktop-m {
+      font-size: 16px;
+    }
+  }
+}

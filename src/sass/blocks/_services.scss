@@ -1,0 +1,95 @@
+.services {
+  padding: 31px 27px 52px;
+  @include desktop-l {
+    padding: 25px 25px 40px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    margin: -15px;
+    margin-top: 37px;
+    @include desktop-l {
+      margin-top: 30px;
+    }
+    @include desktop-m {
+      margin-top: 20px;
+    }
+  }
+  &__item {
+    border: 2px solid $border-gray;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 22%;
+    margin: 15px;
+    flex-grow: 1;
+    @include desktop-m {
+      width: 45%;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+    &-dark {
+      background: $dark-gray;
+      * {
+        color: $light-gray;
+      }
+      a {
+        color: $light-gray;
+      }
+    }
+  }
+  &__inner {
+    padding: 30px;
+    @include desktop-l {
+      padding: 20px;
+    }
+    @include desktop-m {
+      padding: 30px;
+    }
+  }
+  &__subtitle {
+    font-size: 30px;
+    line-height: 34px;
+    white-space: nowrap;
+    @include desktop-l {
+      font-size: 26px;
+      line-height: 30px;
+    }
+    @include desktop-l {
+      font-size: 23px;
+      line-height: 26px;
+    }
+  }
+  &__button {
+    font-size: 23px;
+    line-height: 26px;
+    color: $dark-gray;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: relative;
+    transition: all.6s;
+    &:hover {
+      color: $light-gray;
+    }
+    @include desktop-l {
+      font-size: 20px;
+      line-height: 23px;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 9px;
+      height: 16px;
+      background: url(../../img/icons/Arrow-right.svg);
+    }
+  }
+}

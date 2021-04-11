@@ -1,0 +1,181 @@
+
+// МИКСИН @include desktop {] АНАЛОГИЧЕН СВОЙСТВУ 
+// @media screen and (max-width: 1200px){}
+
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header {
+  background: $white;
+  z-index: 10;   
+  top: 0; 
+  display: flex;
+  justify-content: center;
+  height: 97px;
+  width: 100%;
+  .container {
+    
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  @include desktop-l {
+    height: 87px;
+  }
+  @include desktop-m {
+    height: 77px;
+  }
+
+  &__caption {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    color: $gray;
+    flex-basis: 100%;
+
+    @include desktop-l {
+      font-size: 16px;
+    }
+    @include desktop-l {
+      font-size: 13px;
+    }
+  }
+  &__wrapper {
+    padding: 17px 47px 17px 47px;    
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+
+    @include desktop-l {
+      padding: 14px 37px 14px 37px;  
+    }
+    @include desktop-m {
+      padding: 14px;
+    }
+    @include desktop-s {
+      background-color: $white;
+      margin-top: 60px;
+      min-height: 350px;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+  } 
+  &__submenu {
+    border: none;
+    border-radius: 0 0 28px 28px;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0 42px 24px;
+
+    @include desktop-s {
+      padding: 0 10 10px; 
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+    white-space: nowrap;
+    a {
+      text-decoration: none;
+      color: $black;
+      text-transform: none;
+    }
+    &-active {
+      a {
+        color: $red;
+      }
+    }
+    @include desktop-l {
+      font-size: 14px;
+    }
+    @include desktop-m {
+      font-size: 12px;
+    }
+  }
+  &__link2 {
+    padding: 16px 0;
+    border-bottom: 1px solid $menu-gray;
+    font-size: 20px;
+    @include desktop-l {
+      font-size: 16px;
+    }
+    @include desktop-m {
+      font-size: 14px;
+    }
+    @include desktop-s {
+      padding: 6px 0;
+    }
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+  
+  &__logo {
+    display: block;
+    img {
+      display: block;
+      height: 100%;
+      width: 177px;
+      object-fit: cover;
+      margin: 0;
+    }
+    @include desktop-l {
+      img {
+        width: 120px;
+      }
+    }
+    @include desktop-m {
+      img {
+        width: 100px;
+      }
+    }
+    @include desktop-s {
+      position: absolute;
+      right: 0;
+      top: 0;
+      img {
+        width: 137px;
+      }
+    }
+  }
+  &__search {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop-l {
+      width: 100px;
+    }
+    @include desktop-m {
+      width: 80px;
+      img {
+        width: 25px;
+        height: 25px;
+
+      }
+    }
+    @include desktop-s {
+      display: none;
+    }
+  }
+} 

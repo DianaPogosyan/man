@@ -1,0 +1,172 @@
+.advantages {  
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  color: $dark-gray;
+  padding: 27px 27px 31px;
+  flex-wrap: wrap;
+  @include desktop-l {
+    padding: 27px 27px 20px;
+  }
+  &__inner {
+    padding: 25px 20px 25px 25px;
+    @include desktop-l {
+      padding: 20px;
+    }
+    @include desktop-m {
+      padding: 16px;
+    }
+  }
+  &__item {
+    margin-right: 10px;
+    max-width: 32%;
+    border-radius: 20px;
+    border: 2px solid $border-gray;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 933px;
+    overflow: hidden;
+    @include desktop-l {
+      min-height: 960px;
+    }
+    @include desktop-m {
+      min-height: 800px;
+    }
+
+    @include desktop-s {
+      max-width: initial;
+      width: 100%;
+    }
+
+    &-gray {
+      background-color: $light-gray;
+      padding: 25px 20px 25px 25px;
+      
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+  }
+  &__text {
+    font-size: 23px;
+    line-height: 26px;
+    margin-top: 15px;
+    @include desktop-l {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include desktop-m {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    ul {
+      margin-top: 20px;
+      padding-left: 23px;
+      list-style-type: none;
+    }
+    li {
+      position: relative;
+    }
+
+    li::before {      
+      content: ''; 
+      position: absolute;
+      background-color: $red;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -20px;
+      
+    }
+    address {
+      display: block;
+      margin-top: 20px;
+    }
+    a {
+      color: $cold-gray;
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+    
+  }
+  &__caption {
+    margin-top: 20px;
+    line-height: 26px;
+    &-margin {
+      margin-top: 65px;
+    }
+    &-nowrap {
+      white-space: nowrap;
+    }
+    &-nodecor {
+      a{
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+  &__button {
+    position: absolute;
+    bottom: 25px;
+    margin-top: 20px;
+    width: 168px;
+    height: 61px;
+    background: $cold-gray;
+    border-radius: 5px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $button-gray;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .6s;
+    &:hover {
+        background: $light-gray;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+    @include desktop-l {
+      font-size: 20px;
+      width: 130px;
+      height: 50px;
+      margin-top: 20px;
+    }
+    
+    @include desktop-m {
+      font-size: 18px;
+      width: 110px;
+      height: 40px;
+      margin-top: 20px;
+    }
+    @include desktop-s {
+      position: static;
+    }
+    
+  }
+  &__line {
+    width: 100%;
+    height: 6px;
+    background-color: $red;
+    flex-basis: 100%;
+    margin-top: 55px;
+    @include desktop-l {
+      height: 4px;
+      margin-top: 40px;
+    }
+    @include desktop-m {
+      height: 4px;
+      margin-top: 30px;
+    }
+  }
+}

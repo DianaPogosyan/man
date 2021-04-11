@@ -1,0 +1,45 @@
+
+
+// МИКСИНЫ С РАЗРЕШЕНИЯМИ ЭКРАНОВ, ОБЕСПЕЧИВАЮТ 
+// УДОБСТВО ИСПОЛЬЗОВАНИЯ СВОЙСТВА @media, В СТИЛЯХ
+// ИХ ПОДКЛЮЧАЕМ ТАК: @include tablet{}
+
+
+@mixin desktop-xl {
+    @media screen and (max-width: 1920px) {
+        @content;
+    }
+}
+@mixin desktop-l {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin desktop-m {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin desktop-s {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 568px) {
+        @content;
+    }
+}
+@mixin mobile-s {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+// 1920(hd+), 1440 (hd), 1200px (wide), 992px (desktop), 
+// 768px (tablet), 568px(mobile), 414px(mobile-s). 
