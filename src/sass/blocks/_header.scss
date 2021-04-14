@@ -3,15 +3,6 @@
 // @media screen and (max-width: 1200px){}
 
 
-.main {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: none;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .header {
   background: $white;
   z-index: 10;   
@@ -20,6 +11,7 @@
   justify-content: center;
   height: 97px;
   width: 100%;
+
   .container {
     
     display: flex;
@@ -41,10 +33,10 @@
     flex-basis: 100%;
 
     @include desktop-l {
-      font-size: 16px;
-    }
-    @include desktop-l {
       font-size: 13px;
+    }
+    @include desktop-s {
+      margin-bottom: 20px;
     }
   }
   &__wrapper {
@@ -204,6 +196,7 @@
     &:last-child {
       border: none;
       padding-right: 21px;
+      padding-bottom: 0;
     }
     @include desktop-l {
       font-size: 16px;
@@ -225,7 +218,7 @@
       width: 13px;
       top: 50%; 
       transform: translateY(-50%);
-      left: 9em;
+      left: 8em;
       background: url(../img/icons/Arrow-down.svg) center/cover;
     }
     &-revert {
