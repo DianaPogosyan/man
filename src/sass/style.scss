@@ -44,6 +44,7 @@ body {
 
 * {
     font-family: Arial, sans-serif;
+    outline: none;
 }
 
 .navbar { 
@@ -62,3 +63,10 @@ body {
   background: url(../img/icons/burger.svg);
 }
 
+.block {
+  display: block!important;
+}
+
+.none {
+  display: none;
+}

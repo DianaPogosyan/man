@@ -74,7 +74,7 @@
     width: 100%;
 
   } 
-  &__submenu {
+  &__menu2 {
     border: none;
     border-radius: 0 0 28px 28px;
     width: 100%;
@@ -82,7 +82,7 @@
     position: absolute;
     top: 50px;
     left: 0;
-    padding: 0 42px 24px;
+    padding: 0 42px 10px;
 
     @include desktop-s {
       padding: 0 10 10px; 
@@ -115,6 +115,17 @@
     padding: 16px 0;
     border-bottom: 1px solid $menu-gray;
     font-size: 20px;
+    cursor: pointer;
+    a {
+      transition: all .4s;
+      background: transparent;
+      &:hover {
+      color: $red;
+      background: transparent;
+      }
+    }
+    
+    
     @include desktop-l {
       font-size: 16px;
     }
@@ -126,7 +137,7 @@
     }
     &:last-child {
       border: none;
-      padding-bottom: 0;
+      padding-right: 21px;
     }
   }
   
@@ -158,11 +169,78 @@
       }
     }
   }
-  &__search {
+  
+  &__menu3 {
+    list-style-type: none;
+    font-weight: normal;
+    width: 100%;
+    padding: 0;
+    display: none;
+    position: static !important;
+    border: none;
+    li a {
+    display: block;
+    }
+
+  }
+  &__link3 {
+    padding: 16px 0 16px 30px;
+    border-bottom: 1px solid $menu-gray;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .4s;
+    a {
+      background: transparent;
+      transition: all .4s;
+      &:hover {
+      color: $red;
+      background: transparent;
+      }
+    }
+    &:first-child {
+      border-top: 1px solid $menu-gray;
+      margin-top: 16px;
+    }
+    &:last-child {
+      border: none;
+      padding-right: 21px;
+    }
+    @include desktop-l {
+      font-size: 16px;
+    }
+    @include desktop-m {
+      font-size: 14px;
+    }
+    @include desktop-s {
+      padding: 6px 0;
+    }
+
+  }
+  &__lastToggle {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 13px;
+      width: 13px;
+      top: 50%; 
+      transform: translateY(-50%);
+      left: 9em;
+      background: url(../img/icons/Arrow-down.svg) center/cover;
+    }
+    &-revert {
+      &::after {
+        background: url(../img/icons/Arrow-up.svg) center/cover;
+      }
+    }
+  }
+  &__searchForm {
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    cursor: pointer;
     @include desktop-l {
       width: 100px;
     }
@@ -178,4 +256,96 @@
       display: none;
     }
   }
+
+  &__form {
+    input {
+      width: 380px;
+      height: 48px;
+      border-radius: 4px;
+      border: 1px solid $border-gray;
+      padding: 10px 20px;
+      font-size: 19px;
+    }
+    button {
+      background: $cold-gray;
+      border: none;
+      width: 100px;
+      height: 48px;
+      margin-left: 20px;
+      border-radius: 6px;
+      color: $light-gray;
+      font-size: 19px;
+      transition: all .4s;
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
+  }
+  
+  &__overlay {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    opacity: 0.5; 
+    filter: alpha(opacity=50); 
+    top: 0; 
+    right: 0; 
+    left: 0; 
+    bottom: 0;
+    background: $black; 
+    transition: all .6s;
+  }
+  &__popup {
+    display: none; 
+    position: fixed; 
+    background: $white; 
+    width: 600px; 
+    height: 90px; 
+    top: 35%; 
+    right: 7%;
+    margin: -100px 0 0 -100px; 
+    z-index: 1000;  
+    border-radius: 10px; 
+    padding: 20px 30px;
+    transition: all .6s;
+  }
+  &__close {
+    cursor:  pointer;
+    display: block; 
+    width: 24px; 
+    height: 24px; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: url(../img/icons/close.svg) center/cover no-repeat;
+    transition: .8s;
+  }
+  &__search {
+    height: 50px;
+    width: 500px;
+  }
 } 
+
+
+
+// КАСТОМИЗАЦИЯ ВЫПАДАЮЩИХ МЕНЮШЕК
+
+
+.dropdown-menu {
+  @include desktop-s {
+    padding: 0 0 10px 0;
+  }
+}
+
+.dropdown-item {
+  padding: 0;
+  &:focus {
+    background: transparent;
+  }
+}
+
+.nav-link {
+  &:focus {
+    color: $red;
+  }
+}
